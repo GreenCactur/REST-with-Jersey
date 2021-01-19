@@ -1,0 +1,34 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package io.project.mock.service;
+
+
+import io.project.mock.model.customers;
+import io.project.mock.repository.customersRepository;
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+/**
+ *
+ * @author naaff
+ */
+@Path("test")
+public class customersService {
+    
+    customersRepository br = new customersRepository();
+    
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<customers> getBook() throws SQLException{
+//        return Bookrepo.getBook();
+        return br.getBooks();
+    }
+}
