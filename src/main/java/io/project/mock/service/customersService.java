@@ -13,6 +13,7 @@ import java.util.List;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -20,7 +21,7 @@ import javax.ws.rs.core.MediaType;
  *
  * @author naaff
  */
-@Path("test")
+@Path("/")
 public class customersService {
     
     customersRepository br = new customersRepository();
@@ -31,4 +32,13 @@ public class customersService {
 //        return Bookrepo.getBook();
         return br.getBooks();
     }
-}
+    
+    
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("{id}")
+    public customers getCustomers(@PathParam("id") int id) throws Exception{
+        System.out.print("get customer by id run ! ");
+        return br.getCustomer(id);
+    }
+}   
