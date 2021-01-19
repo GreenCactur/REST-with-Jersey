@@ -60,10 +60,37 @@ public class customersRepository {
             }
         }catch (SQLException e) {
             e.printStackTrace();
-        }
-        
+        }        
         return  books;
     }
+    
+    public customers getCustomer(int id){
+        try {
+            String ID = String.valueOf(id);
+            String sql = "select * from customers where customerNumber=?";
+            PreparedStatement ps = connect.prepareStatement(sql);
+            ps.setString(1, ID);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                customers cs = new customers();
+                cs.setId(rs.getInt(1));
+                cs.setName(rs.getString(2));
+                cs.setAddress(rs.getString(6));
+                cs.setState(rs.getString(9));
+                cs.setCity(rs.getString(8));
+                cs.setCountry(rs.getString(11));
+                
+                return cs;
+            }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        return new customers();
+    }
+    
+    
     
 }
     
