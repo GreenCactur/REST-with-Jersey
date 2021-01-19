@@ -10,8 +10,10 @@ import io.project.mock.model.customers;
 import io.project.mock.repository.customersRepository;
 import java.sql.SQLException;
 import java.util.List;
+import javax.ws.rs.Consumes;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -40,5 +42,11 @@ public class customersService {
     public customers getCustomers(@PathParam("id") int id) throws Exception{
         System.out.print("get customer by id run ! ");
         return br.getCustomer(id);
+    }
+    
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void addData(customers cs) throws Exception{
+        br.addData(cs);
     }
 }   
