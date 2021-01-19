@@ -8,6 +8,7 @@ import io.project.mock.model.customers;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.ws.rs.POST;
 /**
  *
  * @author naaff
@@ -90,7 +91,26 @@ public class customersRepository {
         return new customers();
     }
     
-    
+    public customers addData(customers Cs){
+        
+        try {
+            String sql = "insert into customers(customerNumber,customerName,addressLine1,state,city,country) values (?,?,?,?,?,?);";
+            
+            PreparedStatement ps = connect.prepareStatement(sql);
+              ps.setInt(1,Cs.getId());
+              ps.setString(2,Cs.getName());
+              ps.setString(3,Cs.getAddress());
+              ps.setString(4,Cs.getState());
+              ps.setString(5,Cs.getCity());
+              ps.setString(6,Cs.getCountry());
+              ps.executeUpdate();
+                      
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        return Cs;
+    }
     
 }
     
