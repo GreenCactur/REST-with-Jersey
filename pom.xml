@@ -5,9 +5,9 @@
     <artifactId>mock-repository-book</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>mock-repository-book </name>
+    <name>mock-repository-office </name>
     <build>
-        <finalName>mock-repository-book</finalName>
+        <finalName>mock-repository-office</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
