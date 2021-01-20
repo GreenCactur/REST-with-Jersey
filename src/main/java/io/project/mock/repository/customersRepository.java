@@ -112,6 +112,28 @@ public class customersRepository {
         return Cs;
     }
     
+    public customers editData(customers cs){
+        try {
+            String sql = "update customers set customerName = ?, addressLine1 = ?, state= ?, city= ?, country= ? where customerNumber =?;";
+            
+            PreparedStatement ps = connect.prepareStatement(sql);
+            ps.setString(1, cs.getName());
+            ps.setString(2, cs.getAddress());
+            ps.setString(3, cs.getState());
+            ps.setString(4, cs.getCity());
+            ps.setString(5, cs.getCountry());
+            
+            ps.setInt(6, cs.getId());
+            
+            ps.executeUpdate();
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        return cs;
+    }
+    
 }
     
 
