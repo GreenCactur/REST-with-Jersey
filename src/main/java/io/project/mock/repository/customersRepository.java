@@ -134,6 +134,23 @@ public class customersRepository {
         return cs;
     }
     
+     public String dropData(int id){
+        try {
+            String sql = "delete from customers where customerNumber = ?";
+            
+            PreparedStatement ps = connect.prepareStatement(sql);
+            ps.setInt(1, id);
+            
+            ps.executeUpdate();
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        return "[ \n \" Data Successful to Delete\" \n]";
+    }
+    
+    
 }
     
 
