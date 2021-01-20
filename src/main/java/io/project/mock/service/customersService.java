@@ -11,6 +11,7 @@ import io.project.mock.repository.customersRepository;
 import java.sql.SQLException;
 import java.util.List;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -58,5 +59,11 @@ public class customersService {
         return cs;
     }
     
-   
+    
+    @DELETE
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("{id}")
+    public String deleteData(@PathParam("id") int id){
+        return br.dropData(id);
+    }
 }   
