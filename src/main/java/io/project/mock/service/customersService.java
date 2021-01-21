@@ -25,7 +25,7 @@ import javax.ws.rs.core.MediaType;
  *
  * @author naaff
  */
-@Path("/")
+@Path("customer")
 public class customersService {
     
     customersRepository br = new customersRepository();

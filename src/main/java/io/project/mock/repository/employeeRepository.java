@@ -63,4 +63,57 @@ public class employeeRepository {
 		return Employee;
 	}
 	
+	public employee addEmployee(employee Employee){
+		try {
+			String sql = "insert into employees(employeeNumber,firstname,lastname,email,jobTitle) values(?,?,?,?,?)";
+			PreparedStatement ps= connection.prepareStatement(sql);
+			ps.setInt(1, Employee.getID());
+			ps.setString(2, Employee.getFirstname());
+			ps.setString(3, Employee.getLastname());
+			ps.setString(4, Employee.getEmail());
+			ps.setString(5, Employee.getJob());
+			
+			ps.executeUpdate();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+		return Employee;
+	}
+	
+	public employee editEmployee(employee Employee){
+		try {
+			String sql = "update employees set firstname = ?, lastname= ?, email= ?, jobTitle =? where employeeNumber = ? ; "; 
+			PreparedStatement ps= connection.prepareStatement(sql);
+			ps.setString(1, Employee.getFirstname());
+			ps.setString(2, Employee.getLastname());
+			ps.setString(3, Employee.getEmail());
+			ps.setString(4, Employee.getJob());
+			
+			ps.setInt(5, Employee.getID());
+			ps.executeUpdate();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+		return Employee;
+	}
+	
+	public String deleteEmployee(int id){
+		try {
+			String sql = "delete from employees where employeeNumber=?;"; 
+			PreparedStatement ps= connection.prepareStatement(sql);
+			ps.setInt(1, id);
+			
+			ps.executeUpdate();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+		return "[ \n \"Data Sucessfully to DELETE \"\n ]";
+	}
+	
 }
