@@ -5,6 +5,7 @@
  */
 package io.project.mock.repository;
 import io.project.mock.model.customers;
+import io.project.mock.util.dbConnect;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,31 +16,15 @@ import javax.ws.rs.POST;
  */
 public class customersRepository {
     
-    Connection connect = null;
+    Connection connect = dbConnect.makeConnection();
     Statement statement = null;
-            
-    public customersRepository(){
-        String url = "jdbc:mysql://localhost:3306/classicmodels";
-        String user = "naf";
-        String password = "om906la";
-        String driver = "com.mysql.cj.jdbc.Driver";
-        try{
-            Class.forName(driver);
-            connect = DriverManager.getConnection(url,user,password);
-            System.out.println("Koneksi Berhasil");
-            statement = connect.createStatement();
-            
-        }catch(ClassNotFoundException ex){
-            System.out.println(ex);
-        }catch(SQLException ex){
-            
-        }
-    }
+
     
     public List<customers> getBooks() throws SQLException{
         List<customers> books = new ArrayList<>();
         
         try {
+            
             Statement  statement = connect.createStatement();
             
             String sql = "select * from customers";
