@@ -44,9 +44,10 @@ public class employeeRepository {
 	public employee getEmployee(int id){
 			employee Employee = new employee();
 		try {
+			String ID = String.valueOf(id);
 			String sql ="select employeeNumber,firstname,lastname,email,jobTitle from employees where employeeNumber =?;";
 			PreparedStatement ps= connection.prepareStatement(sql);
-			ps.setInt(1, id);
+			ps.setString(1, ID);
 			ResultSet resultSet = ps.executeQuery();
 			while (resultSet.next()) {
 				Employee.setID(resultSet.getInt(1));
