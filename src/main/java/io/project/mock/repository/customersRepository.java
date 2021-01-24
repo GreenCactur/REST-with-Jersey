@@ -76,6 +76,7 @@ public class customersRepository {
         return new customers();
     }
     
+    //Add data
     public customers addData(customers Cs){
         
         try {
@@ -97,6 +98,7 @@ public class customersRepository {
         return Cs;
     }
     
+    //edit data
     public customers editData(customers cs){
         try {
             String sql = "update customers set customerName = ?, addressLine1 = ?, state= ?, city= ?, country= ? where customerNumber =?;";
@@ -119,6 +121,7 @@ public class customersRepository {
         return cs;
     }
     
+    //delet Data
      public String dropData(int id){
         try {
             String sql = "delete from customers where customerNumber = ?";
@@ -132,7 +135,7 @@ public class customersRepository {
             e.printStackTrace();
         }
         
-        return "[ \n \" Data Successful to Delete\" \n]";
+        return "[ \n \" Datda Successful to Delete\" \n]";
     }
     
     
