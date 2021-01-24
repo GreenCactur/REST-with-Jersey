@@ -3,7 +3,7 @@ package io.project.mock.model;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-import com.sun.xml.txw2.annotation.XmlElement;
+
 
 @XmlRootElement
 @XmlType(propOrder = {"id","phone","address1","address2","postalCode","city","state","teritory","country"})

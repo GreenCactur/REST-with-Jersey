@@ -1,4 +1,13 @@
+/run/media/naaff/1b917b2c-8775-4a97-9162-f0cbae88e068/Mine Progam/Pemrogaman Java/new things/jersey API/mock-repository-book/src/main/java/io/project/mock/service/employeesService.java
 /run/media/naaff/1b917b2c-8775-4a97-9162-f0cbae88e068/Mine Progam/Pemrogaman Java/new things/jersey API/mock-repository-book/src/main/java/io/project/mock/util/dbConnect.java
+/run/media/naaff/1b917b2c-8775-4a97-9162-f0cbae88e068/Mine Progam/Pemrogaman Java/new things/jersey API/mock-repository-book/src/main/java/io/project/mock/model/office.java
 /run/media/naaff/1b917b2c-8775-4a97-9162-f0cbae88e068/Mine Progam/Pemrogaman Java/new things/jersey API/mock-repository-book/src/main/java/io/project/mock/model/customers.java
+/run/media/naaff/1b917b2c-8775-4a97-9162-f0cbae88e068/Mine Progam/Pemrogaman Java/new things/jersey API/mock-repository-book/src/main/java/io/project/mock/model/product.java
+/run/media/naaff/1b917b2c-8775-4a97-9162-f0cbae88e068/Mine Progam/Pemrogaman Java/new things/jersey API/mock-repository-book/src/main/java/io/project/mock/model/employee.java
+/run/media/naaff/1b917b2c-8775-4a97-9162-f0cbae88e068/Mine Progam/Pemrogaman Java/new things/jersey API/mock-repository-book/src/main/java/io/project/mock/service/officeService.java
 /run/media/naaff/1b917b2c-8775-4a97-9162-f0cbae88e068/Mine Progam/Pemrogaman Java/new things/jersey API/mock-repository-book/src/main/java/io/project/mock/service/customersService.java
+/run/media/naaff/1b917b2c-8775-4a97-9162-f0cbae88e068/Mine Progam/Pemrogaman Java/new things/jersey API/mock-repository-book/src/main/java/io/project/mock/service/productService.java
+/run/media/naaff/1b917b2c-8775-4a97-9162-f0cbae88e068/Mine Progam/Pemrogaman Java/new things/jersey API/mock-repository-book/src/main/java/io/project/mock/repository/employeeRepository.java
 /run/media/naaff/1b917b2c-8775-4a97-9162-f0cbae88e068/Mine Progam/Pemrogaman Java/new things/jersey API/mock-repository-book/src/main/java/io/project/mock/repository/customersRepository.java
+/run/media/naaff/1b917b2c-8775-4a97-9162-f0cbae88e068/Mine Progam/Pemrogaman Java/new things/jersey API/mock-repository-book/src/main/java/io/project/mock/repository/officeRepository.java
+/run/media/naaff/1b917b2c-8775-4a97-9162-f0cbae88e068/Mine Progam/Pemrogaman Java/new things/jersey API/mock-repository-book/src/main/java/io/project/mock/repository/productRepository.java
